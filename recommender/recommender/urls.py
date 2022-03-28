@@ -15,8 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from . import views
+
+from recommender.movierecommender.views import movie_recommendation_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('movierecommender/', include('movierecommender.urls'))
+    path('movierecommender/', include('movierecommender.urls')),
+    #route a string that contains a URL pattern
+    path(route='', view=views.movie_recommendation_view, name='recommendations')
 ]
