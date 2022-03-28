@@ -4,7 +4,8 @@ This recommender app is a python application that generates movie recommendation
 
 To launch this project, clone the project
 
-~~~ https://github.com/jamattey/Django-Movie-Recommendation.git ~~~
+~ https://github.com/jamattey/Django-Movie-Recommendation.git 
+
   
 
 
