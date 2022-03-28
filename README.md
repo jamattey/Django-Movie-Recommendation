@@ -2,9 +2,16 @@
 
 This recommender app is a python application that generates movie recommendations.
 
+## Tech Stack
+* Django Backend
+* HTML Frontend
+* Bootstrap CSS
+* SQLite Database
+
 This movie recommendations are provided in a CSV. The site does not host actual movies but its is a recommendation engine using regular code and a database. 
 
 This recommendation engine does not use Machine Learning.......yet 😂😂
+
 To make the recommendation actually work, I needed to first mark the movies a user has watched using Django Admin site. Then I wrote a recommendation algorithm based on your watched movies.
 
 ## Marking Watched Movies In Django Admin
@@ -25,6 +32,7 @@ The content filtering based recommendation algorithms assume you may like a new 
 
 ### Collaborative filtering based: 
 The collaborative filtering algorithms assume you may like a new movie if other users similar to you (similar profile or watched similar movies) have watched this movie.
+
 In this project, we will use content filtering based algorithm, and we will try to recommend unwatched/new movies to you if they are similar to your watched movies.
 
 ## How do we calculate such movie similarity
