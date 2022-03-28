@@ -3,7 +3,7 @@
     <head>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <meta charset="UTF-8">
-        <title>Personal Movie Recommendations</title>
+        <title>James Movie Recommendations</title>
     </head>
     <!--Navigation bar-->
     <nav class="navbar navbar-light bg-light">
@@ -17,6 +17,30 @@
     <body>
     <!--Render Movie list as card columns here -->
     Movies to be shown here!
+    <div class = "container">
+        <div class="card-colums">
+            <!-- For each movie in the movie list, add a movie card -->
+            { % for movie in movie_list % }
+            <div class="col-auto mb-3">
+                <div class="card">
+                    <!-- Movie Card Poster Image -->
+                    <img src="https://image.tmdb.org/t/p/original/ {{movie.poster_path}}" width="320" height="480" alt="original" class="card-img-left">
+                    <div class="car-body bg-light">
+                        <!-- Movie Title -->
+                        <h5 class="card-title">{{movie.original.title}}</h5>
+                        <!-- Movie Ovierview-->
+                        <p class="card-text">{{movie.overview}}</p>
+                        <!-- Movie Genres-->
+                        <p class="card-text">Genres: <b>{{movie.genre}}</b></p>
+                        <!-- Movie vote average -->
+                        <p class="card-text">Rating: <b>{{movie.vote_average}}</b></p>
+                        <!-- Movie Language and release date -->
+                        <p class="card-text">{{movie.original_language}}, {{ movie.release_date }}</p>
+                    </div>
+                </div>
+            </div>
+            { % endfor % }
+        </div>
     </body>
 
 </html>
