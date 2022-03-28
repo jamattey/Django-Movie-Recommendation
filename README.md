@@ -6,6 +6,15 @@ To launch this project, clone the project
 
 ~ https://github.com/jamattey/Django-Movie-Recommendation.git 
 
+Then, you need to install required Python packages
+
+CD to /recommender folder then
+
+Run pip install from a requirements file:
+
+``` python3 -m pip install -r requirements.txt ```
+
+
   
 
 
