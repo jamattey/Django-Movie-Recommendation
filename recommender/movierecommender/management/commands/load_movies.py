@@ -3,6 +3,7 @@ import pandas as pd
 from django.core.management import BaseCommand
 from ...models import Movie
 
+
 class Command(BaseCommand):
     help = 'Load a movie csv file into the database'
 
@@ -29,14 +30,14 @@ class Command(BaseCommand):
             poster_path = row["poster_path"]
             # Populate Movie object for each row
             movie = Movie(imdb_id=imdb_id,
-                            genres=genres,
-                            original_title=original_title,
-                            original_language=original_language,
-                            release_date=release_date,
-                            overview=overview,
-                            vote_average=vote_average,
-                            vote_count=vote_count,
-                            poster_path=poster_path)
+                          genres=genres,
+                          original_title=original_title,
+                          original_language=original_language,
+                          release_date=release_date,
+                          overview=overview,
+                          vote_average=vote_average,
+                          vote_count=vote_count,
+                          poster_path=poster_path)
             # Save movie object
             movie.save()
             print(f"Movie: {imdb_id}, {original_title} saved...")
